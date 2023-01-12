@@ -20,28 +20,56 @@
   <body>
     <main class="h-100">
       <div id="chat" class="d-flex">
+        <!-- user Tab -->
+
         <div id="chat-users">
+          <!-- user profile -->
+
           <div
             class="user-header d-flex align-items-center justify-content-between"
           >
             <div id="my-user" class="d-flex align-items-center">
+              <!-- my user img  and name-->
+
               <figure class="mx-3 mb-0">
                 <img class="h-100 w-100" src="img/avatar_io.jpg" alt="" />
               </figure>
               <h6>Nome Utente</h6>
             </div>
+
+            <!-- my user option -->
+
             <div class="user-options">
               <i class="bi bi-circle"></i>
               <i class="bi bi-chat-left-fill ms-2"></i>
               <i class="bi bi-three-dots-vertical me-2"></i>
             </div>
           </div>
+
+          <!-- notification -->
+
+          <div id="notification" class="d-flex align-items-center">
+            <figure
+              class="mb-0 ms-4 me-2 d-flex justify-content-center align-items-center"
+            >
+              <i class="bi bi-bell-slash-fill"></i>
+            </figure>
+            <div id="notification-text">
+              <h6 class="mb-0">Ricevi notifiche di nuovi messaggi</h6>
+              <a class="text-secondary" href="#">Attiva le notifiche desktop</a>
+            </div>
+          </div>
         </div>
+
+        <!-- chat tab -->
+
         <div id="chat-text">
           <div
             class="user-header d-flex align-items-center justify-content-between"
           >
             <div id="chat-user" class="d-flex align-items-center">
+              <!-- chat user img and name -->
+
               <figure class="mx-3 mb-0">
                 <img class="h-100 w-100" src="img/avatar_1.jpg" alt="" />
               </figure>
@@ -50,6 +78,9 @@
                 <p>Ultimo accesso oggi alle</p>
               </div>
             </div>
+
+            <!-- chat user option -->
+
             <div class="user-options">
               <i class="bi bi-search"></i>
               <i class="bi bi-paperclip ms-2"></i>

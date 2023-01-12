@@ -29,7 +29,7 @@ body {
   background-color: #eaeaea;
 }
 
-.user-header figure {
+figure {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -48,4 +48,22 @@ body {
 #chat-user-info p {
   font-size: 12px;
   color: rgb(141, 141, 141);
+}
+
+#notification {
+  height: 90px;
+  background-color: #8edafc;
+}
+
+#notification figure {
+  background-color: white;
+}
+
+#notification figure i {
+  color: #8edafc;
+  font-size: 20px;
+}
+
+#notification a {
+  font-size: 15px;
 }
