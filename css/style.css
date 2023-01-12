@@ -36,7 +36,16 @@ body {
   overflow: hidden;
 }
 
-#user-options {
+.user-options {
   font-size: 25px;
   color: darkgray;
+}
+
+#chat-user-info {
+  margin-top: 20px;
+}
+
+#chat-user-info p {
+  font-size: 12px;
+  color: rgb(141, 141, 141);
 }
