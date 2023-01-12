@@ -91,7 +91,13 @@ input {
   height: calc(100% - 210px);
   overflow-y: scroll;
 }
+
 #chat-list li {
   height: 80px;
   border-top: 1px solid rgb(236, 236, 236);
+}
+
+#chat-tab {
+  height: calc(100% - 160px);
+  background-image: url(../img/mine.jpg);
 }
