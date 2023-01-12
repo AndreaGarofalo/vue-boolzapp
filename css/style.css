@@ -12,3 +12,14 @@ body {
   left: 100px;
   right: 100px;
 }
+#chat-users {
+  width: 40%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+#chat-text {
+  width: 60%;
+  height: 100%;
+  border: 1px solid black;
+}
