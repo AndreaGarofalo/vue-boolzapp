@@ -10,14 +10,36 @@
       integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Boolzapp</title>
   </head>
   <body>
     <main class="h-100">
       <div id="chat" class="d-flex">
-        <div id="chat-users"></div>
-        <div id="chat-text"></div>
+        <div id="chat-users">
+          <div
+            class="user-header d-flex align-items-center justify-content-between"
+          >
+            <div id="my-user" class="d-flex align-items-center">
+              <figure class="mx-3 mb-0">
+                <img class="h-100 w-100" src="img/avatar_io.jpg" alt="" />
+              </figure>
+              <h6>Nome Utente</h6>
+            </div>
+            <div id="user-options">
+              <i class="bi bi-circle"></i>
+              <i class="bi bi-chat-left-fill mx-2"></i>
+              <i class="bi bi-three-dots-vertical me-2"></i>
+            </div>
+          </div>
+        </div>
+        <div id="chat-text">
+          <div class="user-header"></div>
+        </div>
       </div>
     </main>
   </body>

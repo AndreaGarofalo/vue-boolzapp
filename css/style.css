@@ -23,3 +23,20 @@ body {
   height: 100%;
   border: 1px solid black;
 }
+
+.user-header {
+  height: 80px;
+  background-color: #eaeaea;
+}
+
+.user-header figure {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#user-options {
+  font-size: 25px;
+  color: darkgray;
+}
