@@ -69,6 +69,7 @@ figure {
 }
 
 #search-bar {
+  height: 40px;
   background-color: #eaeaea;
   position: relative;
 }
@@ -86,6 +87,10 @@ input {
   background-size: 16px;
 }
 
+#chat-list {
+  height: calc(100% - 210px);
+  overflow-y: scroll;
+}
 #chat-list li {
   height: 80px;
   border-top: 1px solid rgb(236, 236, 236);
