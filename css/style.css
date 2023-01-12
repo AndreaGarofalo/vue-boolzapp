@@ -3,3 +3,12 @@ body {
   width: 100vw;
   background: linear-gradient(to bottom, #009688 15%, #dadbd4 15% 100%);
 }
+
+#chat {
+  background-color: #ffffff;
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 100px;
+  right: 100px;
+}
