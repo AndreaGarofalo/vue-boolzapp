@@ -39,7 +39,7 @@
             <div id="my-user" class="d-flex align-items-center">
               <!-- my user img  and name-->
 
-              <figure class="mx-3 mb-0">
+              <figure class="mx-3 mb-0 flex-shrink-0">
                 <img
                   class="h-100 w-100"
                   :src="`img/avatar${user.avatar}.jpg`"
@@ -62,7 +62,7 @@
 
           <div id="notification" class="d-flex align-items-center">
             <figure
-              class="mb-0 ms-4 me-2 d-flex justify-content-center align-items-center"
+              class="mb-0 ms-4 me-2 d-flex justify-content-center align-items-center flex-shrink-0"
             >
               <i class="bi bi-bell-slash-fill"></i>
             </figure>
@@ -89,9 +89,10 @@
             <ul class="p-0">
               <li
                 v-for="(contact, i) in contacts"
+                @click="setCurrentIndex(i)"
                 class="d-flex align-items-center"
               >
-                <figure class="mx-4 my-3">
+                <figure class="mx-4 my-3 flex-shrink-0">
                   <img
                     class="h-100 w-100"
                     :src="`img/avatar${contact.avatar}.jpg`"
@@ -117,11 +118,15 @@
             <div id="chat-user" class="d-flex align-items-center">
               <!-- chat user img and name -->
 
-              <figure class="mx-3 mb-0">
-                <img class="h-100 w-100" src="img/avatar_1.jpg" alt="" />
+              <figure class="mx-3 mb-0 flex-shrink-0">
+                <img
+                  class="h-100 w-100"
+                  :src="`img/avatar${currentContact.avatar}.jpg`"
+                  :alt="currentContact.name"
+                />
               </figure>
               <div id="chat-user-info">
-                <h6 class="mb-0">Michele</h6>
+                <h6 class="mb-0">{{ currentContact.name }}</h6>
                 <p>Ultimo accesso oggi alle</p>
               </div>
             </div>
@@ -139,18 +144,16 @@
 
           <div id="chat-tab">
             <ul class="px-3">
-              <li class="message-container p-3 sent">
+              <li
+                v-for="message in currentChat"
+                class="message-container p-3"
+                :class="message.status"
+              >
                 <div class="message p-2 rounded-3">
-                  <p class="m-0">Hai portato a spasso il cane?</p>
+                  <p class="m-0">{{ message.text }}</p>
                   <time datetime="2021-08-03T09:53" class="text-end"
-                    >31/01/2022 - 12:13</time
+                    >{{ message.date }}</time
                   >
-                </div>
-              </li>
-              <li class="message-container p-3 received">
-                <div class="message p-2 rounded-3">
-                  <p class="m-0">Si!</p>
-                  <time datetime="2021-08-03T09:53">31/01/2022 - 12:14</time>
                 </div>
               </li>
             </ul>

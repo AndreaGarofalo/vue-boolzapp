@@ -92,6 +92,9 @@ figure {
   height: 80px;
   border-top: 1px solid rgb(236, 236, 236);
 }
+#chat-list li:hover {
+  background-color: lightgray;
+}
 
 #chat-tab {
   height: calc(100% - 160px);
