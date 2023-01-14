@@ -6,6 +6,7 @@ const app = Vue.createApp({
   data() {
     return {
       currentIndex: 0,
+      newMessage: "",
       user: {
         name: "Gennara Liudopati",
         avatar: "_io",
@@ -104,10 +105,22 @@ const app = Vue.createApp({
     currentChat() {
       return this.currentContact.messages;
     },
+    buildNewMessage() {
+      const date = new Date().toJSON().slice(0, 10).split("-");
+      const localDate = date[2] + "/" + date[1] + "/" + date[0];
+      const time = new Date().toLocaleTimeString();
+      const newDate = localDate + " " + time;
+      const text = this.newMessage;
+      return { date: newDate, text: text, status: "sent" };
+    },
   },
   methods: {
     setCurrentIndex(index) {
       this.currentIndex = index;
+    },
+    sendMessage() {
+      this.currentChat.push(this.buildNewMessage);
+      this.newMessage = "";
     },
   },
 });

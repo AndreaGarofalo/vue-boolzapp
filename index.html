@@ -171,6 +171,8 @@
               </div>
               <div class="col-10">
                 <input
+                  v-model="newMessage"
+                  @keyup.enter="sendMessage"
                   type="text"
                   class="form-control"
                   placeholder="Scrivi un messaggio"
