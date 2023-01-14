@@ -15,13 +15,12 @@ body {
 #chat-users {
   width: 40%;
   height: 100%;
-  border: 1px solid black;
+  border-right: 2px solid rgb(0, 60, 255);
 }
 
 #chat-text {
   width: 60%;
   height: 100%;
-  border: 1px solid black;
 }
 
 .user-header {
@@ -76,9 +75,6 @@ figure {
 
 #search-bar input {
   font-size: 12px;
-}
-
-input {
   border: 1px solid #ada9a9;
   padding: 1% 8%;
   background-image: url(../img/search.svg);
@@ -100,4 +96,36 @@ input {
 #chat-tab {
   height: calc(100% - 160px);
   background-image: url(../img/mine.jpg);
+  overflow-y: scroll;
+}
+
+.message-container {
+  display: flex;
+}
+
+.message-container.sent {
+  justify-content: end;
+}
+
+.message-container.sent .message {
+  background-color: #d5f9ba;
+}
+
+.message-container.received .message {
+  background-color: white;
+}
+
+.message time {
+  font-size: 10px;
+  color: rgb(141, 141, 141);
+  float: right;
+}
+
+#chat-input {
+  height: 80px;
+  background-color: #eaeaea;
+}
+
+#message-text {
+  width: 100%;
 }
