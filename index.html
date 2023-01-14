@@ -21,10 +21,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="js/script.js"></script>
     <title>Boolzapp</title>
   </head>
   <body>
-    <main class="h-100">
+    <main id="root" class="h-100">
       <div id="chat" class="d-flex">
         <!-- user Tab -->
 
@@ -38,9 +40,13 @@
               <!-- my user img  and name-->
 
               <figure class="mx-3 mb-0">
-                <img class="h-100 w-100" src="img/avatar_io.jpg" alt="" />
+                <img
+                  class="h-100 w-100"
+                  :src="`img/avatar${user.avatar}.jpg`"
+                  :alt="user.name"
+                />
               </figure>
-              <h6>Nome Utente</h6>
+              <h6>{{ user.name }}</h6>
             </div>
 
             <!-- my user option -->
@@ -81,36 +87,19 @@
 
           <div id="chat-list">
             <ul class="p-0">
-              <li class="d-flex align-items-center">
+              <li
+                v-for="(contact, i) in contacts"
+                class="d-flex align-items-center"
+              >
                 <figure class="mx-4 my-3">
-                  <img class="h-100 w-100" src="img/avatar_1.jpg" alt="" />
+                  <img
+                    class="h-100 w-100"
+                    :src="`img/avatar${contact.avatar}.jpg`"
+                    :alt="contact.name"
+                  />
                 </figure>
                 <div class="h-100 mt-4">
-                  <h6>Michele</h6>
-                </div>
-              </li>
-              <li class="d-flex align-items-center">
-                <figure class="mx-4 my-3">
-                  <img class="h-100 w-100" src="img/avatar_2.jpg" alt="" />
-                </figure>
-                <div class="h-100 mt-4">
-                  <h6>Fabio</h6>
-                </div>
-              </li>
-              <li class="d-flex align-items-center">
-                <figure class="mx-4 my-3">
-                  <img class="h-100 w-100" src="img/avatar_3.jpg" alt="" />
-                </figure>
-                <div class="h-100 mt-4">
-                  <h6>Samuele</h6>
-                </div>
-              </li>
-              <li class="d-flex align-items-center">
-                <figure class="mx-4 my-3">
-                  <img class="h-100 w-100" src="img/avatar_4.jpg" alt="" />
-                </figure>
-                <div class="h-100 mt-4">
-                  <h6>Luisa</h6>
+                  <h6>{{ contact.name }}</h6>
                 </div>
               </li>
             </ul>
