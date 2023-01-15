@@ -132,3 +132,11 @@ figure {
 #message-text {
   width: 100%;
 }
+
+#chat-list li {
+  display: none;
+}
+
+#chat-list li.visible {
+  display: flex;
+}

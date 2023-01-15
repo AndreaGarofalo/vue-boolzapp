@@ -8,6 +8,7 @@ const app = Vue.createApp({
       currentIndex: 0,
       newMessage: "",
       currentStatus: "",
+      searchTerm: "",
       user: {
         name: "Gennara Liudopati",
         avatar: "_io",
@@ -133,6 +134,16 @@ const app = Vue.createApp({
       this.currentStatus = "received";
       this.currentChat.push(this.buildNewMessage);
       this.newMessage = "";
+    },
+    filteredChat() {
+      const searchedTerm = this.searchTerm.toLowerCase();
+      this.contacts.forEach((contact) => {
+        if (!contact.name.toLowerCase().includes(searchedTerm)) {
+          contact.visible = false;
+        } else {
+          contact.visible = true;
+        }
+      });
     },
   },
 });

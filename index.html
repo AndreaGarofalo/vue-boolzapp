@@ -76,6 +76,8 @@
 
           <div id="search-bar" class="d-flex align-items-center">
             <input
+              v-model="searchTerm"
+              @keyup="filteredChat"
               id="search"
               class="m-2 w-100"
               type="search"
@@ -90,7 +92,8 @@
               <li
                 v-for="(contact, i) in contacts"
                 @click="setCurrentIndex(i)"
-                class="d-flex align-items-center"
+                class="align-items-center"
+                :class="{'visible': contact.visible}"
               >
                 <figure class="mx-4 my-3 flex-shrink-0">
                   <img
@@ -159,7 +162,7 @@
             </ul>
           </div>
 
-          <!-- chat imput -->
+          <!-- chat input -->
 
           <div id="chat-input" class="flex-shrink-0 container-fluid">
             <div class="row h-100 align-items-center">
