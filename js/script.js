@@ -107,6 +107,10 @@ const app = Vue.createApp({
     currentChat() {
       return this.currentContact.messages;
     },
+    currentTime() {
+      const time = new Date().toLocaleTimeString();
+      return time;
+    },
     buildNewMessage() {
       const date = new Date().toJSON().slice(0, 10).split("-");
       const localDate = date[2] + "/" + date[1] + "/" + date[0];
