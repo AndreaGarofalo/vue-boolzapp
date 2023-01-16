@@ -9,6 +9,7 @@ const app = Vue.createApp({
       newMessage: "",
       currentStatus: "",
       searchTerm: "",
+      lastMessageIndex: 0,
       user: {
         name: "Gennara Liudopati",
         avatar: "_io",
@@ -119,6 +120,12 @@ const app = Vue.createApp({
       const text = this.newMessage;
       const status = this.currentStatus;
       return { date: newDate, text: text, status: status };
+    },
+    getLastMessage(index) {
+      console.log(index);
+      const lastMessageIndex = this.currentChat.length - 1;
+      const lastMessage = this.contacts[index].messages[lastMessageIndex].text;
+      return lastMessage;
     },
   },
   methods: {
